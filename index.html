@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HackMySenpai — Anime AI Chat</title>
+    <meta name="description" content="Chat with HackMySenpai, an anime cyberpunk AI powered by Gemini Pro. Multi-thread history, saved locally." />
+    <meta property="og:title" content="HackMySenpai — Anime AI Chat" />
+    <meta property="og:description" content="A cyberpunk anime senpai AI. Multi-thread history. Powered by Gemini." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Dots&family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="grid-bg"></div>
+    <div class="scanlines"></div>
+
+    <aside id="sidebar" class="sidebar">
+      <div class="brand">
+        <div class="brand-glyph">咲</div>
+        <div>
+          <div class="brand-title">HackMySenpai</div>
+          <div class="brand-sub">handle with precautions</div>
+        </div>
+      </div>
+
+      <button id="newThreadBtn" class="btn btn-primary">
+        <span>+</span> New Chat
+      </button>
+
+      <div class="threads-label">Threads</div>
+      <div id="threadsList" class="threads"></div>
+
+      <div class="attribution">
+        Made by <span class="accent">Lovable</span> × <span class="accent">mcysync</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button id="menuBtn" class="icon-btn" aria-label="Menu">☰</button>
+        <div class="model-pill">
+          <span class="dot"></span> Gemini 3.1 Pro • unrestricted mode
+        </div>
+      </header>
+
+      <section id="messages" class="messages">
+        <div class="empty-state" id="emptyState">
+          <div class="hero-glyph">咲</div>
+          <h1 class="hero-title">Yo, kouhai~</h1>
+          <p class="hero-sub">Ask me anything. Senpai's got you covered.</p>
+          <div class="chips">
+            <button class="chip">Write a cyberpunk short story</button>
+            <button class="chip">Debug my Python code</button>
+            <button class="chip">Explain quantum entanglement</button>
+            <button class="chip">Roast my startup idea</button>
+          </div>
+        </div>
+      </section>
+
+      <form id="composer" class="composer">
+        <textarea
+          id="input"
+          placeholder="Message senpai…  (Enter to send, Shift+Enter for newline)"
+          rows="1"
+          autocomplete="off"
+        ></textarea>
+        <button id="sendBtn" class="btn btn-primary send" type="submit">
+          <span class="send-arrow">➤</span>
+        </button>
+      </form>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
