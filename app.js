@@ -2,9 +2,8 @@
 // Calls the Lovable-hosted /api/public/senpai-chat endpoint so the Gemini key stays server-side.
 
 const API_URL = (() => {
-  // If hosted on the same origin as the API, use relative. Otherwise, edit this to your app's URL.
   const override = window.HACKMYSENPAI_API_URL;
-  return override || "/api/public/senpai-chat";
+  return override || "https://hack-your-senpai.lovable.app/api/public/senpai-chat";
 })();
 
 const STORAGE_KEY = "hackmysenpai.threads.v1";
